@@ -89,7 +89,7 @@ nav a:hover {
   border-bottom: 1px solid black;
   color: white;
 }
-.aside{
+.card{
   background-color: rgb(228, 228, 228);
 }
 .main, .aside{
