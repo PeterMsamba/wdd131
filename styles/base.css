@@ -11,6 +11,10 @@ h1{
   margin: 0;
   text-align: center;
 }
+#course-title{
+  color: rgb(252, 252, 33);
+  font-style: oblique;
+}
 h2{
   text-align: center;
 }
@@ -23,7 +27,6 @@ nav{
 }
 nav ul{
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   display: flex;
@@ -109,10 +112,4 @@ footer p, .date-time{
   text-align: center;
   margin: 0;
   padding: 0;
-}
-.date-time{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 7px;
 }
