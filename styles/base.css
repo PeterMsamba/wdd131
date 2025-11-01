@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+h1{
+  background-color: rgb(56, 56, 56);
+  height: 100px;
+  width: 100%;
+  color: rgb(235, 233, 233);
+  margin: 0;
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+nav{
+  background-color: rgb(248, 248, 4);
+  height: 50px;
+  width: 100%;
+  margin-top: 0;
+  border-bottom: 1px solid rgb(207, 207, 17);
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  height:50px;
+  margin: 0 60px;
+}
+nav li a{
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  align-items: center;
+}
+nav a:hover {
+	text-decoration: underline;
+  color: rgb(56, 56, 56);
+}
+
+.grid-main{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+.main{
+  background-color: rgb(201, 201, 201);
+}
+.profile-picture{
+  border-radius: 5px;
+  width: 180px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.malawi-flug{
+  border-radius: 5px;
+  width: 100px;
+  margin-left: 20px; 
+}
+.caption{
+  margin-left: 20px;
+  font-style: italic;
+  font-size: 11px;
+  margin: 0;
+}
+.location-heading{
+  border-bottom: 1px solid rgb(146, 145, 145);
+}
+.about-me{
+  display: grid;
+  grid-template-columns: 1fr 200px;
+}
+.about-me-lower{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+.about-heading, .aside h2{
+  background-color: rgb(12, 1, 73);
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  color: white;
+}
+.aside{
+  background-color: rgb(228, 228, 228);
+}
+.main, .aside{
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.aside li{
+  margin: 10px;
+}
+p{
+  padding-left: 20px;
+}
+footer{
+  background-color: rgb(56, 56, 56);
+  padding: 10px;
+}
+footer p, .date-time{
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.date-time{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7px;
+}
