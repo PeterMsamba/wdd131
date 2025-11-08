@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Media Query Example</title>
-    <meta name="description" content="Media query learning activity example page.">
-    <meta name="author" content="Peter Msamba">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/media-query.css">
-    <link rel="stylesheet" href="styles/media-query-large.css">
-    <link rel="stylesheet" href="styles/media-query.css">
-    <link rel="stylesheet" href="styles/media-query-large.css">
-    </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple website</title>
+  <meta name="description" content="Home page for the temple website">
+  <meta name="author" content="Peter Msamba">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/media-query.css"> 
+  <link rel="stylesheet" href="styles/temple.css">
+  <link rel="stylesheet" href="styles/temple-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/temple.js" defer></script>
+ </head>
 <body>
-  
+ <header>
+  <div class="header-content">
+    <h1>Temple Album</h1>
+    <button id="menu"></button>
+  </div>
+  <nav>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Old</a></li>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Large</a></li>
+      <li><a href="#">Small</a></li>
+    </ul>
+  </nav>
+ </header>
+ <main>
+  <h2>Home</h2> <section>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+        <img src="images/church photo.jpg" alt="church picture"> 
+        <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+    <figure>
+      <img src="images/church photo.jpg" alt="church picture"> 
+      <caption>San Diego California</caption> 
+    </figure>
+  </section>
+ </main>
+ <footer>
+  <div class="date-time">
+    <p>Last modification: <span class="date" id="date"></span>
+    <span class="time" id="time"></span></p>
+  </div>
+  <p>© 2025 Peter Msamba - Malawi</p>
+ </footer>
 </body>
 </html>
