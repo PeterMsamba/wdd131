@@ -35,4 +35,9 @@
         background-color: rgba(255, 255, 255, 0.2);
         color: #fff;
     }
+    .pictures-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+    }
 }
