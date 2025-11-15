@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+  <body>
+
+    <header>
+        <h1>Lilongwe, Malawi</h1>
+    </header>
+
+    <main>
+      <div class="content-container">
+        <section class="data-section">
+            <h2>Data</h2>
+            <dl>
+                <dt>Population:</dt>
+                <dd>1,393,010</dd>
+                <dt>Capital:</dt>
+                <dd>Lilongwe</dd>
+                <dt>Official Language:</dt>
+                <dd>Chichewa, English</dd>
+                <dt>Area (City):</dt>
+                <dd>403 km²</dd>
+                <dt>Currency:</dt>
+                <dd>Malawi Kwacha MKW</dd>
+                <dt>Time Zone:</dt>
+                <dd>CAT+</dd>
+                <dt>Calling Code:</dt>
+                <dd>+265</dd>
+            </dl>
+        </section>
+        <div class="image-section">
+          <picture>
+            <source 
+                media="(min-width: 768px)" 
+                srcset="images/lilongwe-picture.webp" 
+                type="image/webp">
+            <img src="images/lilongwe-picture.webp" alt="lilongwe city">
+          </picture>
+        </div>
+        <section class="weather-section">
+          <div class="weather-header">
+            <h2>Weather</h2>
+            <span class="weather-icon-mobile"></span> 
+          </div> 
+          <dl>
+              <dt>Temperature:</dt>
+              <dd id="temp-value">22 °C</dd>
+              <dt>Wind Speed:</dt>
+              <dd id="wind-value">12 km/h</dd>
+              <dt>Condition:</dt>
+              <dd>Partly Cloudy</dd>
+              <dt>Wind Chill:</dt>
+              <dd id="windchill-output">Calculating...</dd>
+          </dl>
+        </section>
+      </div>
+    </main>
+    <footer>
+        <p>Peter Msamba - Lilongwe, Malawi</p>
+        <p>Copyright &copy; <span id="current-year"></span> | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+  </body>
+</html>

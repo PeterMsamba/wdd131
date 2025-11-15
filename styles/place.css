@@ -1,0 +1,115 @@
+:root {
+    --color-primary: #FC3D39;
+    --color-secondary: #008753;
+    --color-background: #F8F8F8;
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-border-subtle: #DCDCDC;
+    
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color-border-subtle);
+}
+
+/* MAIN CONTENT LAYOUT*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* DATA AND WEATHER SECTIONS */
+.data-section, .weather-section {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 8px;
+    background-color: var(--color-text-light);
+}
+
+.data-section h2, .weather-section h2 {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Data List Styling */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+}
+
+dt {
+    font-weight: 500;
+}
+
+/* IMAGE SECTION */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* WEATHER SECTION */
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* SVG Icon in Mobile View */
+.weather-icon-mobile {
+    width: 32px;
+    height: 32px;
+}
+
+.weather-icon-mobile img {
+    width: 100%; 
+    height: 100%;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.3rem;
+}

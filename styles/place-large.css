@@ -1,0 +1,43 @@
+/* --- MEDIA QUERY FOR WIDER VIEW --- */
+@media (min-width: 768px) {
+    
+    .content-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .data-section {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .image-section {
+        flex: 2.5;
+        order: -1;
+    }
+    
+    .weather-section {
+        flex: 1;
+        min-width: 200px;
+        order: 1;
+    }
+
+    /* WIDER VIEW WEATHER ICON*/
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather-section h2 {
+        position: relative;
+    }
+
+    .weather-section h2::after {
+        content: " \26C5";
+        font-size: 1.5rem;
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translateY(-50%);
+        color: var(--color-primary);
+    }
+}
