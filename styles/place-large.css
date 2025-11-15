@@ -1,4 +1,4 @@
-/* --- MEDIA QUERY FOR WIDER VIEW --- */
+/*MEDIA QUERY FOR WIDER VIEW */
 @media (min-width: 768px) {
     
     .content-container {
@@ -22,17 +22,11 @@
         order: 1;
     }
 
-    /* WIDER VIEW WEATHER ICON*/
-    .weather-icon-mobile {
-        display: none;
-    }
-
     .weather-section h2 {
         position: relative;
     }
 
     .weather-section h2::after {
-        content: " \26C5";
         font-size: 1.5rem;
         position: absolute;
         top: 50%;
