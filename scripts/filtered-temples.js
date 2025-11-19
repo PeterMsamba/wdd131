@@ -131,7 +131,7 @@ const createTempleCard = (temple) => {
     
     img.setAttribute('src', temple.imageUrl);
     img.setAttribute('alt', `${temple.templeName} Temple`);
-    img.setAttribute('loading', 'lazy'); // Native lazy loading
+    img.setAttribute('loading', 'lazy');
     img.setAttribute('width', '400');
     img.setAttribute('height', '250');
 
@@ -208,9 +208,6 @@ const filterTemples = (event) => {
     // Display the results
     displayTemples(filteredList);
 };
-
-
-// --- Event Listener Setup ---
 
 // Select all navigation links
 const navLinks = document.querySelectorAll('.navigation a');
