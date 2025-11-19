@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    let car_model = {
+      type : 'mercedence',
+      model : 'benz',
+      plate_number : 1313,
+
+    };
+   
+    console.log(car_model.type);
+
+    let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
+    let namesB = names.filter(name => name.charAt(0) === 'B');
+    console.log(namesB);
+
+    let nameslength = names.map(name => name.length);
+    console.log(nameslength);
+
+    function add(a, b){
+      return a + b
+    };
+    console.log(add(2, 4));
+
+    const adding = (a, b) => {
+      return a + b
+    };
+    console.log(adding(2,4));
+  </script>
+</body>
+</html>
