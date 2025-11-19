@@ -43,11 +43,12 @@ header h1 {
 }
 
 .navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
 
 .navigation a {
@@ -66,7 +67,7 @@ header h1 {
 }
 
 .navigation.open {
-    display: block;
+    display: flex;
 }
 
 main {
@@ -79,33 +80,6 @@ main h2 {
     margin-top: 0;
 }
 
-figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-caption {
-    margin-top: 0.5rem;
-    font-style: italic;
-    color: #555;
-}
-
-footer {
-    background-color: rgb(62, 62, 160);
-    color: rgb(252, 252, 252);
-    text-align: center;
-    padding: 10px;
-}
-
 .pictures-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -114,6 +88,11 @@ footer {
 }
 
 figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    
     border: 1px solid #ccc;
     padding: 15px;
     text-align: center;
@@ -121,12 +100,16 @@ figure {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
 }
+
 figure img {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 figure h3 {
@@ -146,6 +129,13 @@ figcaption p {
     color: #333;
     display: inline-block;
     width: 70px;
+}
+
+footer {
+    background-color: #3e3ea0; 
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
 }
 
 footer p {
