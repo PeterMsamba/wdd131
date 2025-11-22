@@ -42,6 +42,11 @@ header h1 {
     content: "❎";
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
 .navigation {
     display: none;
     flex-direction: column;
@@ -91,7 +96,6 @@ figure {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    
     border: 1px solid #ccc;
     padding: 15px;
     text-align: center;
@@ -112,7 +116,7 @@ figure img {
 }
 
 figure h3 {
-    color: navy;
+    color: #3e3ea0;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
