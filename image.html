@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Container to hide the overflow */
+.marquee-container {
+  width: 100%;
+  overflow: hidden; /* Key: Clips the content to the viewable area */
+  white-space: nowrap; /* Ensures images stay on one line */
+}
+
+/* Content wrapper that holds the duplicated images */
+.marquee-content {
+  display: flex; /* Arranges images side-by-side */
+  animation: scroll-left 20s linear infinite; /* Adjust duration for speed */
+}
+
+/* Pause animation on hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Styling for the images */
+.marquee-content img {
+  height: 50px; /* Adjust size as needed */
+  margin: 0 20px; /* Space between images */
+  flex-shrink: 0; /* Prevents images from shrinking */
+}
+
+/* Define the animation */
+@keyframes scroll-left {
+  /* Start at position 0 */
+  from {
+    transform: translateX(0);
+  }
+  /* Move left until the end of the first set of images */
+  to {
+    /* Translate by -50% because the content is duplicated (100% + 100% = 200%).
+       Moving -50% shifts the first full set off-screen and brings the second full set into view. */
+    transform: translateX(-50%); 
+  }
+}
+
+.video-container {
+  position: relative; /* Base for absolute positioning */
+  width: 100%;
+  padding-bottom: 56.25%; /* Creates a 16:9 aspect ratio (9/16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+  </style>
+</head>
+<body>
+  <div class="marquee-container">
+  <div class="marquee-content">
+    <img src="idata:image/png;base64,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" alt="Logo 1">
+    <img src="image2.png" alt="Logo 2">
+    <img src="image1.png" alt="Logo 1">
+    <img src="image2.png" alt="Logo 2">
+    </div>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>My Website with a YouTube Video</title>
+</head>
+<body>
+
+    <h1>Check out this video!</h1>
+    
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+    
+</body>
+</html>
+</div>
+</body>
+</html>
