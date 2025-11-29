@@ -1,35 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 Project Site Plan: EcoConnect Hub</title>
+    <link rel="stylesheet" href="siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <script>
-    function calculate(a, b, callback) {
-  callback(a + b);
-}
+    <header>
+        <h1>WDD 131 Project Site Plan</h1>
+        <p>Project Name: EcoConnect Hub</p>
+    </header>
 
-function displayResult(result) {
-  console.log('The result is: ' + result);
-}
-calculate(2, 3, displayResult)
-function fetchData(callback) {
-  // using setTimeout to simulate fetching data from a server
-  setTimeout(() => {
-    // This calls the 'callback' function and passes data to it.
-    callback('Data has been fetched');
-  }, 2000); // This simulates a 2-second delay from a service.
-}
+    <main>
+        <section id="site-name">
+            <h2>Site Name & Logo</h2>
+            <hr>
+            <h3>EcoConnect Hub 🌱</h3>
+            <p><strong>Description:</strong> This name was chosen because the site aims to be a central **Hub** for people looking to make an **Eco**logical **Connect**ion to sustainable living. It emphasizes community and practical resources.</p>
+            <p><strong>Optional Domain:</strong> ecoconnecthub.org</p>
+            <div class="logo-placeholder">[Placeholder for Green Leaf/Recycle Icon Logo]</div>
+        </section>
 
-// function that processes the data
-function processData(data) {
-  console.log("Data received:", data);
-}
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <hr>
+            <p>The **EcoConnect Hub** site serves as an informative resource and community platform. It provides actionable guides, local event listings, and product reviews focused on zero-waste living, renewable energy, and ethical consumerism. Its primary goal is to empower visitors to adopt more sustainable habits and connect them with local green initiatives.</p>
+        </section>
 
-// Call the fetchData function and pass the processData function as an argument.
-fetchData(processData);
-  </script>
+        <section id="scenarios">
+            <h2>Scenarios (Target Audience Questions)</h2>
+            <hr>
+            <ol>
+                <li>**Scenario 1:** "I am new to zero-waste living. Where can I find a simple, step-by-step guide to start reducing plastic in my home?"</li>
+                <li>**Scenario 2:** "I want to buy a high-quality, ethically-sourced travel mug. Does the site have a product review section, and which brand is recommended?"</li>
+                <li>**Scenario 3:** "Are there any local community garden workshops or clean-up events happening in my area next month?"</li>
+            </ol>
+        </section>
+
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color Name</th>
+                        <th>Hex/RGB Value</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #38761D; color: #FFFFFF;">**Primary Green**</td>
+                        <td>`#38761D` (RGB: 56, 118, 29)</td>
+                        <td>**Headings, Buttons (Background), Logo Accent, Footer Background.** Represents nature, growth, and sustainability.</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #D9EAD3; color: #333333;">**Secondary Light Green**</td>
+                        <td>`#D9EAD3` (RGB: 217, 234, 211)</td>
+                        <td>**Section Backgrounds, Navigation Background, Accents.** Used for visual separation of content blocks.</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFFFFF; color: #333333;">**Background/Body**</td>
+                        <td>`#FFFFFF` (White)</td>
+                        <td>**Main Page Background, Card Backgrounds.** Provides clean readability.</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #333333; color: #FFFFFF;">**Text/Link**</td>
+                        <td>`#333333` (Dark Gray)</td>
+                        <td>**Body Text, Footer Text.** Ensures high contrast and readability against the white background.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <hr>
+            <ul>
+                <li><strong>Heading Font:</strong> **Montserrat** (Bold, Sans-serif)
+                    <ul><li>**Usage:** Used for `<h1>`, `<h2>`, and `<h3>`. Chosen for a modern, strong, and confident look.</li></ul>
+                </li>
+                <li><strong>Body Font:</strong> **Roboto** (Regular/Bold, Sans-serif)
+                    <ul><li>**Usage:** Used for all paragraph text, lists, and navigation links. Chosen for high legibility and clean appearance on all devices.</li></ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="wireframe">
+            <h2>Home Page Wireframes</h2>
+            <hr>
+
+            <h3>Mobile View (Small Screen)</h3>
+            <figure class="wireframe-mobile">
+                <figcaption>Mobile Wireframe Sketch</figcaption>
+                
+            </figure>
+            
+            <h3>Desktop View (Large Screen)</h3>
+            <figure class="wireframe-desktop">
+                <figcaption>Desktop Wireframe Sketch</figcaption>
+                
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Peter Msamba | WDD 131 Project Plan</p>
+    </footer>
 </body>
 </html>
