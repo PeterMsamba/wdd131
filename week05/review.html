@@ -6,26 +6,10 @@
     <title>Review Confirmation</title>
     <meta name="description" content="Review submission confirmation page.">
     <meta name="author" content="Peter Msamba">
-    <link rel="stylesheet" href="form.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Get current count from localStorage, default to 0 if not found
-            let reviewCount = localStorage.getItem('reviewCount');
-            reviewCount = reviewCount ? parseInt(reviewCount) : 0;
-
-            // Increment the count for the successful submission
-            reviewCount++;
-
-            // Update localStorage with the new count
-            localStorage.setItem('reviewCount', reviewCount);
-
-            // Display the new count on the page
-            const countElement = document.getElementById('review-counter');
-            if (countElement) {
-                countElement.textContent = reviewCount;
-            }
-        });
-    </script>
+    <link rel="stylesheet" href="styles/form.css">
+    
+    <script src="scripts/review.js" defer></script>
+    
 </head>
 <body>
     <header>
