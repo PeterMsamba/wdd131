@@ -3,75 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 Project Site Plan: EcoConnect Hub</title>
-    <link rel="stylesheet" href="siteplan.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>StreamVerse Site Plan</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>WDD 131 Project Site Plan</h1>
-        <p>Project Name: EcoConnect Hub</p>
+        <h1>🎬 KayiraMovies Site Plan</h1>
+        <p>A blueprint for the KayiraMovies streaming website project.</p>
     </header>
 
     <main>
         <section id="site-name">
-            <h2>Site Name & Logo</h2>
+            <h2>Site Name</h2>
             <hr>
-            <h3>EcoConnect Hub 🌱</h3>
-            <p><strong>Description:</strong> This name was chosen because the site aims to be a central **Hub** for people looking to make an **Eco**logical **Connect**ion to sustainable living. It emphasizes community and practical resources.</p>
-            <p><strong>Optional Domain:</strong> ecoconnecthub.org</p>
-            <div class="logo-placeholder">[Placeholder for Green Leaf/Recycle Icon Logo]</div>
+            <p>**StreamVerse**</p>
+            <p>
+                This name was chosen to convey the site's primary function—**streaming**—and the idea of a comprehensive, diverse world or **universe** of content. It aims to be memorable, modern, and directly relevant to the service offered.
+            </p>
+            <p>Optional domain availability: **KayiraMovies.net**</p>
+            <div class="logo">
+                <p>KayiraMovies Logo Placeholder: </p>
+            </div>
         </section>
 
         <section id="site-purpose">
             <h2>Site Purpose</h2>
             <hr>
-            <p>The **EcoConnect Hub** site serves as an informative resource and community platform. It provides actionable guides, local event listings, and product reviews focused on zero-waste living, renewable energy, and ethical consumerism. Its primary goal is to empower visitors to adopt more sustainable habits and connect them with local green initiatives.</p>
+            <p>
+                **KayiraMovies** is a subscription-based movie and TV show streaming service. The site provides a user-friendly interface for browsing, searching, and watching a wide library of content, with personalized recommendations and the ability to manage a watchlist and profile.
+            </p>
         </section>
 
         <section id="scenarios">
-            <h2>Scenarios (Target Audience Questions)</h2>
+            <h2>Scenarios</h2>
             <hr>
-            <ol>
-                <li>**Scenario 1:** "I am new to zero-waste living. Where can I find a simple, step-by-step guide to start reducing plastic in my home?"</li>
-                <li>**Scenario 2:** "I want to buy a high-quality, ethically-sourced travel mug. Does the site have a product review section, and which brand is recommended?"</li>
-                <li>**Scenario 3:** "Are there any local community garden workshops or clean-up events happening in my area next month?"</li>
-            </ol>
+            <p>These questions represent the needs of the target audience (movie/TV enthusiasts looking for entertainment):</p>
+            <ul>
+                <li>"I just finished watching a movie and want to find something similar—does the site offer **personalized recommendations** based on my viewing history?"</li>
+                <li>"I'm looking for the **latest documentary** released in the past month. How can I quickly find new arrivals in a specific genre?"</li>
+                <li>"I remember a movie with a specific actor, but I forgot the title. Can I **search by cast member**?"</li>
+                <li>"I need to pause my subscription for the summer. Where can I find and **manage my billing and account settings**?"</li>
+            </ul>
         </section>
 
         <section id="color-schema">
             <h2>Color Schema</h2>
             <hr>
+            <p>The schema uses a dark, sophisticated palette common in entertainment apps, designed to make the movie posters and titles pop.</p>
             <table>
                 <thead>
                     <tr>
                         <th>Color Name</th>
-                        <th>Hex/RGB Value</th>
+                        <th>Hex Code</th>
                         <th>Usage</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="background-color: #38761D; color: #FFFFFF;">**Primary Green**</td>
-                        <td>`#38761D` (RGB: 56, 118, 29)</td>
-                        <td>**Headings, Buttons (Background), Logo Accent, Footer Background.** Represents nature, growth, and sustainability.</td>
+                        <td>**Primary Background** (Dark Gray/Black)</td>
+                        <td class="color-swatch" style="background-color: #121212; color: #FFFFFF;">#121212</td>
+                        <td>Used for the **main page background** (body, sections). Creates a cinematic and distraction-free viewing experience.</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #D9EAD3; color: #333333;">**Secondary Light Green**</td>
-                        <td>`#D9EAD3` (RGB: 217, 234, 211)</td>
-                        <td>**Section Backgrounds, Navigation Background, Accents.** Used for visual separation of content blocks.</td>
+                        <td>**Accent/Primary Text** (Vibrant Red)</td>
+                        <td class="color-swatch" style="background-color: #E50914; color: #FFFFFF;">#E50914</td>
+                        <td>Used for **call-to-action buttons** (e.g., "Sign Up," "Play"), **primary headings** (`h1`, `h2`), and interactive **accents** (e.g., play icon).</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #FFFFFF; color: #333333;">**Background/Body**</td>
-                        <td>`#FFFFFF` (White)</td>
-                        <td>**Main Page Background, Card Backgrounds.** Provides clean readability.</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: #333333; color: #FFFFFF;">**Text/Link**</td>
-                        <td>`#333333` (Dark Gray)</td>
-                        <td>**Body Text, Footer Text.** Ensures high contrast and readability against the white background.</td>
+                        <td>**Secondary Text/Subtle Background** (Light Gray)</td>
+                        <td class="color-swatch" style="background-color: #A0A0A0;">#A0A0A0</td>
+                        <td>Used for **paragraph text**, subtle background elements (e.g., footer), and inactive navigation links.</td>
                     </tr>
                 </tbody>
             </table>
@@ -80,36 +82,47 @@
         <section id="typography">
             <h2>Typography</h2>
             <hr>
-            <ul>
-                <li><strong>Heading Font:</strong> **Montserrat** (Bold, Sans-serif)
-                    <ul><li>**Usage:** Used for `<h1>`, `<h2>`, and `<h3>`. Chosen for a modern, strong, and confident look.</li></ul>
-                </li>
-                <li><strong>Body Font:</strong> **Roboto** (Regular/Bold, Sans-serif)
-                    <ul><li>**Usage:** Used for all paragraph text, lists, and navigation links. Chosen for high legibility and clean appearance on all devices.</li></ul>
-                </li>
-            </ul>
+            <p>A combination of a classic, bold display font for titles and a highly readable sans-serif for body content.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Font Name</th>
+                        <th>Type</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>**Playfair Display** (Serif)</td>
+                        <td>Headings Font</td>
+                        <td>Used for the **Site Name**, **Section Headings** (`h1`, `h2`), and important movie/show **titles** to give a premium, dramatic feel.</td>
+                    </tr>
+                    <tr>
+                        <td>**Roboto** (Sans-serif)</td>
+                        <td>Body/Interface Font</td>
+                        <td>Used for all **paragraph text**, **navigation links**, search bars, and detailed information (e.g., cast lists, descriptions) for high **readability** across all devices.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        
-        <section id="wireframe">
-            <h2>Home Page Wireframes</h2>
-            <hr>
 
-            <h3>Mobile View (Small Screen)</h3>
-            <figure class="wireframe-mobile">
-                <figcaption>Mobile Wireframe Sketch</figcaption>
-                
-            </figure>
+        <section id="wireframe">
+            <h2>Wireframe (Home Page)</h2>
+            <hr>
+            <p>A visual representation of the content layout for the home page.</p>
+
+            <h3>Mobile View Sketch</h3>
+            <p>Prioritizes vertical scrolling and large, tappable elements.</p>
             
-            <h3>Desktop View (Large Screen)</h3>
-            <figure class="wireframe-desktop">
-                <figcaption>Desktop Wireframe Sketch</figcaption>
-                
-            </figure>
+
+            <h3>Desktop View Sketch</h3>
+            <p>Utilizes horizontal space for a more expansive content display and persistent navigation.</p>
+            
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Peter Msamba | WDD 131 Project Plan</p>
+        <p>KayiraMovies Site Plan Document - November 2025</p>
     </footer>
 </body>
 </html>
