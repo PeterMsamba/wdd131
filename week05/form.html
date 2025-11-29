@@ -6,9 +6,10 @@
     <title>Product Review Form</title>
     <meta name="description" content="Product review form for WDD 131 activity.">
     <meta name="author" content="Peter Msamba">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
     <script>
-        // Product Array provided for dynamic option generation
+        // Product Array
         const products = [
             { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
             { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -105,7 +106,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name | WDD 131</p>
+      <div class="date-time">
+        <p>Last modification: <span class="date" id="date"></span>
+        <span class="time" id="time"></span></p>
+      </div>
+      <p>© 2025 Peter Msamba - Malawi</p>
     </footer>
 </body>
 </html>

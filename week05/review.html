@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Review submission confirmation page.">
+    <meta name="author" content="Peter Msamba">
+    <link rel="stylesheet" href="form.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get current count from localStorage, default to 0 if not found
+            let reviewCount = localStorage.getItem('reviewCount');
+            reviewCount = reviewCount ? parseInt(reviewCount) : 0;
+
+            // Increment the count for the successful submission
+            reviewCount++;
+
+            // Update localStorage with the new count
+            localStorage.setItem('reviewCount', reviewCount);
+
+            // Display the new count on the page
+            const countElement = document.getElementById('review-counter');
+            if (countElement) {
+                countElement.textContent = reviewCount;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted!</h1>
+    </header>
+    <main class="confirmation">
+        <p>Thank you for submitting your product review.</p>
+        <p>This is the <strong id="review-counter">0</strong> review you have completed on this device.</p>
+        <a href="form.html">Submit another review</a>
+    </main>
+
+    <footer>
+      <div class="date-time">
+        <p>Last modification: <span class="date" id="date"></span>
+        <span class="time" id="time"></span></p>
+      </div>
+      <p>© 2025 Peter Msamba - Malawi</p>
+    </footer>
+</body>
+</html>
