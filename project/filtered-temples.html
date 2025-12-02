@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple website</title>
+  <meta name="description" content="A dynamic photo album featuring temples from around the world, filterable by age, size, and location.">
+  <meta name="author" content="Peter Msamba">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temple-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+ </head>
+<body>
+ <header>
+  <div class="header-content">
+    <h1>KayiraMovies</h1>
+    <button id="menu"></button>
+  </div>
+  <nav>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Trending Now</a></li>
+      <li><a href="#">Western TV</a></li>
+      <li><a href="#">Animated Film</a></li>
+      <li><a href="#">Movies/Tv Series</a></li>
+    </ul>
+  </nav>
+ </header>
+ <main>
+  <h2>Home</h2> 
+  <section>
+    <div class="pictures-grid">
+    
+    </div>
+  </section>
+ </main>
+ <footer>
+  <div class="date-time">
+    <p>Last modification: <span class="date" id="date"></span>
+    <span class="time" id="time"></span></p>
+  </div>
+  <p>© 2025 Peter Msamba - Malawi</p>
+ </footer>
+</body>
+</html>
