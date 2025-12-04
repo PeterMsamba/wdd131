@@ -1,18 +1,29 @@
-
 const movieArray = [
-  { title: "Avatar: The Way of Water", 
-    category: "Trending Movies", 
-    image: "images/pictureI.jpg" 
-  },
-  { title: "The Dark Knight", 
-    category: "Action", 
-    image: "images/pictureII.jpg" 
-  },
+  { title: "The Echoes Of Yesterday", category: "Trending Movies", image: "images/pictureI.jpg" },
+  { title: "The Silk Road Odyssey", category: "Action", image: "images/pictureII.jpg" },
+  { title: "Stellar Ascension", category: "Drama", image: "images/pictureIII.jpg" },
+  { title: "Omega Chroncicles", category: "Animation", image: "images/pictureIV.jpg" },
+  { title: "The Crimson Tide", category: "Drama", image: "images/pictureV.jpg" },
+  { title: "Synaptic Shift", category: "Trending Movies", image: "images/pictureVI.jpg" },
+  { title: "Neo-Genesis", category: "Action", image: "images/pictureVII.jpg" },
+  { title: "The Dragon's Blade", category: "Animation", image: "images/pictureVIII.jpg" },
+  { title: "The Silent of Shadow", category: "Action", image: "images/pictureIV.jpg" }, // Fixed title typo
+  { title: "The Aegis of Kings", category: "Trending Movies", image: "images/pictureX.jpg" },
+  { title: "The Last Eclipse", category: "Action", image: "images/pictureXI.jpg" },
+  { title: "The Shadowed Mind", category: "Drama", image: "images/pictureXII.jpg" },
 ];
 
 const picturesGrid = document.querySelector('.movie-picture-grid');
-const navigationLinks = document.querySelectorAll('.navigation li a');
+// Update selector to only target the Filter links, not the main menu links
+const filterLinks = document.querySelectorAll('.filter-navigation li a');
+const hamButton = document.querySelector('#menu');
+const mainNav = document.querySelector('.main-navigation');
 
+// --- HAMBURGER MENU LOGIC ---
+hamButton.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    hamButton.classList.toggle('open');
+});
 
 const createMovieCard = (movie) => {
   const movieCard = document.createElement('figure');
@@ -22,9 +33,9 @@ const createMovieCard = (movie) => {
   img.setAttribute('src', movie.image);
   img.setAttribute('alt', `Poster for ${movie.title}`);
   img.setAttribute('loading', 'lazy');
-  img.setAttribute('width', '315');
-  img.setAttribute('height', '250');
-
+  
+  // Removed fixed width/height attributes to allow CSS to control responsiveness
+  
   const caption = document.createElement('figcaption');
   const title = document.createElement('p');
   title.classList.add('movie-title');
@@ -35,59 +46,48 @@ const createMovieCard = (movie) => {
   category.textContent = movie.category;
 
   caption.appendChild(title);
-  caption.appendChild(category);
+  caption.appendChild(category); // Added category back
   movieCard.appendChild(img);
   movieCard.appendChild(caption);
 
   return movieCard;
 };
 
-const renderMovies = (filterCategory = null) => {
-  // 1. Clear the current grid content
+const renderMovies = (filterCategory = 'All') => {
   picturesGrid.innerHTML = '';
 
-  // 2. Determine which movies to display
-  const moviesToDisplay = filterCategory
-    ? movieArray.filter(movie => movie.category.toLowerCase() === filterCategory.toLowerCase())
-    : movieArray;
+  const moviesToDisplay = (filterCategory === 'All')
+    ? movieArray
+    : movieArray.filter(movie => movie.category.toLowerCase() === filterCategory.toLowerCase());
 
-  // 3. Render the movies
   moviesToDisplay.forEach(movie => {
     const movieCardElement = createMovieCard(movie);
     picturesGrid.appendChild(movieCardElement);
   });
   
-  // 4. Optional: If no movies match the filter
   if (moviesToDisplay.length === 0) {
-      picturesGrid.innerHTML = '<p class="no-results">No movies found in this category.</p>';
+      picturesGrid.innerHTML = '<p class="no-results" style="grid-column: 1/-1; text-align:center;">No movies found in this category.</p>';
   }
 };
 
-
-navigationLinks.forEach(link => {
+// --- FILTER LOGIC ---
+filterLinks.forEach(link => {
   link.addEventListener('click', (event) => {
-    // Prevent the default link behavior (navigating to '#')
     event.preventDefault();
 
-    // Get the category text from the link: We trim and replace spaces to normalize the category name
     let category = event.target.textContent.trim(); 
     
-    if (category === 'Trending Movies') {
-
-    } else if (category === 'Dramer') {
-        category = 'Drama'; 
-    } else if (category === 'Animination') {
-        category = 'Animation';
-    }
+    // Normalization logic (if HTML has typos, otherwise this is just safety)
+    if (category === 'Dramer') category = 'Drama'; 
+    if (category === 'Animination') category = 'Animation';
     
-    // Call the rendering function with the selected filter category
     renderMovies(category);
     
-    // Highlight the active link (optional but good practice)
-    navigationLinks.forEach(l => l.classList.remove('active'));
+    // Update active class
+    filterLinks.forEach(l => l.classList.remove('active'));
     event.target.classList.add('active');
   });
 });
 
-// Display all movies when the page first loads
-renderMovies();
+// Initial Render
+renderMovies('All');

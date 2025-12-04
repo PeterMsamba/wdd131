@@ -1,67 +1,178 @@
-*{
+/* Reset and Base Styles */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto', arial;
+
+body {
+  font-family: 'Roboto', arial, sans-serif;
   margin: 0 auto;
-  width: 640px;
+  width: 100%;
+  background-color: #f4f4f4;
 }
-header{
-  border: 1px solid gray;
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-header ul{
+
+/* Header */
+header {
+  background-color: #1A1A1A;
+  color: white;
+  padding: 10px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: red;
+  margin: 0;
+}
+
+/* Hamburger Menu Button */
+#menu {
+  font-size: 2rem;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  order: 3; /* Places menu on the right on mobile */
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❎";
+}
+
+/* Main Navigation (Hidden by default on mobile) */
+.main-navigation {
+  display: none; /* Hidden */
+  flex-direction: column;
+  list-style: none;
+  background-color: #333;
+  position: absolute;
+  top: 100%; /* Push below header */
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* When Javascript toggles class 'open', show menu */
+.main-navigation.open {
+  display: flex;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-navigation a:hover {
+  background-color: #555;
+}
+
+.user-container {
+  display: none; /* Hide user icon on small mobile if needed, or adjust order */
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+  max-width: 1200px; /* Prevents it from getting too wide on huge screens */
+  margin: 0 auto;
+}
+
+.coverimage {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Filter Navigation */
+.filter-section h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.filter-navigation {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-   padding: 10px 5px;
-}
-header li a{
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  margin-right: 70px;
-}
-header li a:hover{
-  text-decoration: underline;
-}
-.header-flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #1A1A1A;
-  align-items: center;
-}
-h1{
-  text-align: center;
-  padding: 10px;
-  color: red;
-}
-.coverimage{
-  width: 640px;
-}
-.user-icon{
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  background-color: white;
-  margin: 3px;
-}
-
-.movie-picture-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
-}
-footer {
-    background-color: #3e3ea0; 
-    color: #fff; 
-    text-align: center;
-    padding: 10px;
+  margin-bottom: 20px;
 }
 
-footer p {
-    margin: 5px 0;
+.filter-navigation a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  background-color: #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.filter-navigation a:hover,
+.filter-navigation a.active {
+  background-color: red;
+  color: white;
+}
+
+/* Movie Grid - Mobile (1 Column) */
+.movie-picture-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 15px;
+}
+
+.movie-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-title {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+.movie-category {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  background-color: #3e3ea0; 
+  color: #fff; 
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
