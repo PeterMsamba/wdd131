@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Home Page</title>
+  <meta name="description" content="home page contain navigation and filtering feature for the movies">
+  <meta name="author" content="Peter Msamba">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/moviesite.css">
+  <link rel="stylesheet" href="styles/movies-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/movie.js" defer></script>
+ </head>
+<body>
+  <header>
+    <h1>Kayirah Movie Show</h1>
+    <div class="header-flex">
+      <div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <img class="user-icon" src="icons/user-regular-full.svg" alt="user iconS">
+      </div>
+    </div>
+  </header>
+  <main>
+    <img class="coverimage" src="images/homeCoverPage.jpg" alt="home page cover">
+    <section>
+      <p>
+        Filter by:
+      </p>
+      <ul class="navigation">
+        <li><a href="#">Trending Movies</a></li>
+        <li><a href="#">Dramer</a></li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Animination</a></li>
+      </ul>
+
+      <div class="movie-picture-grid">
+    
+      </div>
+    </section>
+    </section>
+  </main>
+  <footer>
+    <div class="date-time">
+      <p>Today's Date & Time: <span class="date" id="date"></span>
+      <span class="time" id="time"></span></p>
+    </div>
+    <p>© 2025 Peter Msamba - Malawi</p>
+ </footer>
+</body>
+</html>
