@@ -1,16 +1,52 @@
 const movieArray = [
-  { title: "The Echoes Of Yesterday", category: "Trending Movies", image: "images/pictureI.jpg" },
-  { title: "The Silk Road Odyssey", category: "Action", image: "images/pictureII.jpg" },
-  { title: "Stellar Ascension", category: "Drama", image: "images/pictureIII.jpg" },
-  { title: "Omega Chroncicles", category: "Animation", image: "images/pictureIV.jpg" },
-  { title: "The Crimson Tide", category: "Drama", image: "images/pictureV.jpg" },
-  { title: "Synaptic Shift", category: "Trending Movies", image: "images/pictureVI.jpg" },
-  { title: "Neo-Genesis", category: "Action", image: "images/pictureVII.jpg" },
-  { title: "The Dragon's Blade", category: "Animation", image: "images/pictureVIII.jpg" },
-  { title: "The Silent of Shadow", category: "Action", image: "images/pictureIV.jpg" }, // Fixed title typo
-  { title: "The Aegis of Kings", category: "Trending Movies", image: "images/pictureX.jpg" },
-  { title: "The Last Eclipse", category: "Action", image: "images/pictureXI.jpg" },
-  { title: "The Shadowed Mind", category: "Drama", image: "images/pictureXII.jpg" },
+  { title: "The Echoes Of Yesterday", 
+    category: "Trending Movies", 
+    image: "images/pictureI.jpg" 
+  },
+  { title: "The Silk Road Odyssey", 
+    category: "Action", 
+    image: "images/pictureII.jpg" 
+  },
+  { title: "Stellar Ascension", 
+    category: "Drama", 
+    image: "images/pictureIII.jpg" 
+  },
+  { title: "Omega Chroncicles", 
+    category: "Animation", 
+    image: "images/pictureIV.jpg" 
+  },
+  { title: "The Crimson Tide", 
+    category: "Drama", 
+    image: "images/pictureV.jpg" 
+  },
+  { title: "Synaptic Shift", 
+    category: "Trending Movies", 
+    image: "images/pictureVI.jpg" 
+  },
+  { title: "Neo-Genesis", 
+    category: "Action", 
+    image: "images/pictureVII.jpg" 
+  },
+  { title: "The Dragon's Blade", 
+    category: "Animation", 
+    image: "images/pictureVIII.jpg" 
+  },
+  { title: "The Silent of Shadow", 
+    category: "Action", 
+    image: "images/pictureIV.jpg" 
+  },
+  { title: "The Aegis of Kings", 
+    category: "Trending Movies", 
+    image: "images/pictureX.jpg" 
+  },
+  { title: "The Last Eclipse", 
+    category: "Action", 
+    image: "images/pictureXI.jpg" 
+  },
+  { title: "The Shadowed Mind", 
+    category: "Drama", 
+    image: "images/pictureXII.jpg" 
+  },
 ];
 
 const picturesGrid = document.querySelector('.movie-picture-grid');
@@ -46,7 +82,7 @@ const createMovieCard = (movie) => {
   category.textContent = movie.category;
 
   caption.appendChild(title);
-  caption.appendChild(category); // Added category back
+  caption.appendChild(category);
   movieCard.appendChild(img);
   movieCard.appendChild(caption);
 
@@ -77,7 +113,7 @@ filterLinks.forEach(link => {
 
     let category = event.target.textContent.trim(); 
     
-    // Normalization logic (if HTML has typos, otherwise this is just safety)
+    // Normalization logic
     if (category === 'Dramer') category = 'Drama'; 
     if (category === 'Animination') category = 'Animation';
     

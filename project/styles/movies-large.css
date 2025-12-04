@@ -1,6 +1,4 @@
 @media (min-width: 641px) {
-  
-  /* Reset Header for Desktop */
   .header-flex {
     justify-content: space-between;
     padding: 0 20px;
@@ -10,16 +8,14 @@
     font-size: 1.5rem;
   }
 
-  /* Hide Hamburger on Desktop */
   #menu {
     display: none;
   }
 
-  /* Show Main Navigation Horizontal */
   .main-navigation {
-    display: flex; /* Always show */
+    display: flex; 
     flex-direction: row;
-    position: static; /* Remove absolute positioning */
+    position: static;
     width: auto;
     background-color: transparent;
   }
@@ -34,7 +30,6 @@
     background-color: transparent;
   }
 
-  /* Show User Icon */
   .user-container {
     display: block;
   }
@@ -46,14 +41,12 @@
     background-color: white;
   }
 
-  /* Grid Layout - 2 Columns for Tablet */
   .movie-picture-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 900px) {
-  /* Grid Layout - 3 Columns for Desktop */
   .movie-picture-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
