@@ -11,8 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/moviesite.css">
   <link rel="stylesheet" href="styles/movies-large.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/review.css">
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/movie.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+  <script src="scripts/review.js" defer></script>
 </head>
 <body>
   <header>
@@ -34,34 +38,18 @@
       </div>
     </div>
   </header>
+    <main class="confirmation">
+        <p>Thank you for submitting your product review.</p>
+        <p>This is the <strong id="review-counter">0</strong> review you have completed on this device.</p>
+        <a href="form.html">Submit another review</a>
+    </main>
 
-  <main>
-    <div class="hero-container">
-      <img class="coverimage" src="images/homeCoverPage.jpg" alt="Home page cover">
-    </div>
-
-    <section class="filter-section">
-      <h3>Filter by:</h3>
-      <ul class="filter-navigation">
-        <li><a href="#" class="active">All</a></li>
-        <li><a href="#">Trending Movies</a></li>
-        <li><a href="#">Drama</a></li>
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Animation</a></li>
-      </ul>
-
-      <div class="movie-picture-grid">
-        
+    <footer>
+      <div class="date-time">
+        <p>Last modification: <span class="date" id="date"></span>
+        <span class="time" id="time"></span></p>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="date-time">
-      <p>Today's Date & Time: <span class="date" id="date"></span>
-      <span class="time" id="time"></span></p>
-    </div>
-    <p>© 2025 Peter Msamba - Malawi</p>
-  </footer>
+      <p>© 2025 Peter Msamba - Malawi</p>
+    </footer>
 </body>
 </html>

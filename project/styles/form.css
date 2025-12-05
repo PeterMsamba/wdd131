@@ -1,0 +1,127 @@
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+form {
+    background-color: #ffffff; /* FIX: Standardized color from 'white' to '#ffffff' */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Constrain width for better readability */
+}
+
+/* Fieldset and Legend Styling */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    color: #5d4037;
+    padding: 0 0.5rem;
+}
+
+/* Label and Input Styling */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #795548; /* Lighter brown on focus */
+    outline: none;
+}
+
+/* Specific Field Layouts */
+
+/* Overall Rating Radio Buttons */
+.overall-rating .rating-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.overall-rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.overall-rating input[type="radio"] {
+    width: auto;
+    margin-top: 0.5rem;
+}
+
+/* Features Checkbox Group */
+.features-checkbox .checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.features-checkbox .checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.features-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.75rem;
+}
+
+/* Submit Button */
+.submit-button {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #5d4037;
+    color: #ffffff; /* FIX: Standardized color from 'white' to '#ffffff' */
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4e342e; /* Slightly darker brown on hover */
+}
+.confirmation{
+  margin-bottom: 337px;
+}
+@media screen and (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+}
