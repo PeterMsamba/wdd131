@@ -103,8 +103,8 @@ textarea:focus {
 }
 
 input[type="submit"] {
-    background-color: #5d4037;
-    color: #ffffff; /* FIX: Standardized color from 'white' to '#ffffff' */
+    background-color: #ddd;
+    color: #333;
     border: none;
     padding: 1rem 2rem;
     border-radius: 4px;
@@ -115,7 +115,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #4e342e; /* Slightly darker brown on hover */
+    background-color: red; /* Slightly darker brown on hover */
+    color: white;
 }
 .confirmation{
   margin-bottom: 337px;
